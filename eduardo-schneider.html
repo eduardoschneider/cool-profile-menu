@@ -1,0 +1,190 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<style>
+
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+* {
+  outline: none;
+  user-select: none;
+}
+
+body, html {
+  margin: 0;
+  background: #ddd;
+  color: white;
+}
+
+body {
+  font-family: "Raleway", "Microsoft JhengHei", Arial, sans-serif;
+}
+
+.profile {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+@keyframes show-profile {
+  0% {
+    width: 0;
+  }
+}
+.profile .photo{
+  box-sizing: border-box;
+}
+.profile .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  border:2px solid black;
+  background-color: #fafafa;
+  margin-left: 35px;
+  margin-top:-0.1px;
+  opacity:1;
+  box-shadow: 0 0 0.5rem white;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.profile .photo img {
+  width: 100%;
+}
+
+.profile .box {
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: -25%;
+  right: 100%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.3s;
+}
+.profile .box i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ececec;
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  border:0.5px solid black;
+  left: 18px;
+  top: calc(75px - 50px/2);
+  box-shadow: 0 0 0.5rem #000;
+  transition-duration: 0.1s;
+}
+.profile .box i:hover {
+  transition-delay: initial !important;
+  box-shadow: 0 0 0 1px gray;
+  width:52px;
+  height:52px;
+  font-size:28px;
+  
+}
+.profile .box.open {
+  opacity: 1;
+}
+.profile .box.open i {
+  left: 60px;
+}
+.profile .box.open i:nth-of-type(1) {
+  background-color:#1E1F26;
+  color:white;
+  transform: rotate(-135deg) translateX(75px) rotate(135deg);
+  transition-delay: 0.2s;
+}
+.profile .box.open i:nth-of-type(2) {
+  background-color:#4267B2;
+  color:white;
+  transform: rotate(-90deg) translateX(75px) rotate(90deg);
+  transition-delay: 0.3s;
+}
+.profile .box.open i:nth-of-type(3) {
+  background-color:#302F2F;
+  color:white;
+  transform: rotate(-45deg) translateX(75px) rotate(45deg);
+  transition-delay: 0.4s;
+}
+.profile .box.open i:nth-of-type(4) {
+  background-color:#314358;
+  color:white;
+  transform: rotate(0deg) translateX(75px) rotate(0deg);
+  transition-delay: 0.5s;
+}
+.profile .box.open i:nth-of-type(5) {
+  background-color:#007EA7;
+  color:white;
+  transform: rotate(45deg) translateX(75px) rotate(-45deg);
+  transition-delay: 0.6s;
+}
+.profile .box.open i:nth-of-type(6) {
+  background-color:#05CC47;
+  color:white;
+  transform: rotate(90deg) translateX(75px) rotate(-90deg);
+  transition-delay: 0.7s;
+}
+.profile .box.open i:nth-of-type(7) {
+  background-color:#55ACEF;
+  color:white;
+  transform: rotate(135deg) translateX(75px) rotate(-135deg);
+  transition-delay: 0.8s;
+}
+.profile .box.open i:nth-of-type(8) {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color:white;
+  transform: rotate(180deg) translateX(75px) rotate(-180deg);
+  transition-delay: 0.9s;
+}
+
+.pic {
+  display: block;
+  width: 17vw;
+  height: 17vh;
+  object-fit: cover;
+}
+
+</style>
+<div class="profile">
+  <div class="photo"><a href="#"><img class="pic" src="https://steamuserimages-a.akamaihd.net/ugc/913541900239404742/048DF566A4F4B51A60C1EB060A2CC6C7FB85CC39/"/></a></div>
+  <div class="box">
+	  <i class="fa fa-codepen"></i>
+	  <i class="fa fa-facebook"></i>
+	  <i class="fa fa-github"></i>
+	  <i class="fa fa-tumblr"></i>
+	  <i class="fa fa-linkedin"></i>
+	  <i class="fa fa-deviantart"></i>
+	  <i class="fa fa-twitter"></i>
+	  <i class="fa fa-instagram"></i>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+(function () {
+  $('.profile').click(function () {
+    $(this).toggleClass('active');
+    return $('.box').toggleClass('open');
+  });
+
+}).call(this);
+
+//# sourceURL=coffeescript
+
+</script>
+</body>
+</html>
