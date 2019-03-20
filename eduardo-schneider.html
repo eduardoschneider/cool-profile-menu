@@ -35,13 +35,16 @@ body {
 }
 .profile .photo{
   box-sizing: border-box;
+  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/913541900239404742/048DF566A4F4B51A60C1EB060A2CC6C7FB85CC39/");
+  background-size:150px 100px;
+  background-position: center; 
 }
 .profile .photo {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   overflow: hidden;
-  border:2px solid black;
+  border:5px double black;
   background-color: #fafafa;
   margin-left: 35px;
   margin-top:-0.1px;
@@ -107,37 +110,37 @@ body {
   background-color:#4267B2;
   color:white;
   transform: rotate(-90deg) translateX(75px) rotate(90deg);
-  transition-delay: 0.3s;
+  transition-delay: 0.35s;
 }
 .profile .box.open i:nth-of-type(3) {
   background-color:#302F2F;
   color:white;
   transform: rotate(-45deg) translateX(75px) rotate(45deg);
-  transition-delay: 0.4s;
+  transition-delay: 0.50s;
 }
 .profile .box.open i:nth-of-type(4) {
   background-color:#314358;
   color:white;
   transform: rotate(0deg) translateX(75px) rotate(0deg);
-  transition-delay: 0.5s;
+  transition-delay: 0.65s;
 }
 .profile .box.open i:nth-of-type(5) {
   background-color:#007EA7;
   color:white;
   transform: rotate(45deg) translateX(75px) rotate(-45deg);
-  transition-delay: 0.6s;
+  transition-delay: 0.8s;
 }
 .profile .box.open i:nth-of-type(6) {
   background-color:#05CC47;
   color:white;
   transform: rotate(90deg) translateX(75px) rotate(-90deg);
-  transition-delay: 0.7s;
+  transition-delay: 0.95s;
 }
 .profile .box.open i:nth-of-type(7) {
   background-color:#55ACEF;
   color:white;
   transform: rotate(135deg) translateX(75px) rotate(-135deg);
-  transition-delay: 0.8s;
+  transition-delay: 1.10s;
 }
 .profile .box.open i:nth-of-type(8) {
   background: #f09433; 
@@ -147,7 +150,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   color:white;
   transform: rotate(180deg) translateX(75px) rotate(-180deg);
-  transition-delay: 0.9s;
+  transition-delay: 1.25s;
 }
 
 .pic {
@@ -157,9 +160,31 @@ body {
   object-fit: cover;
 }
 
+.menu {
+	z-index:5;
+	width:30px;
+	height:30px;
+	
+	top:68%;
+	left:51%;
+	background-color:transparent;
+	position:absolute;
+
+}
+
+.menu-ico {
+	margin-top:8px;
+	margin-left:9px;
+	color:black;
+	font-size:19px;
+	font-weight:bold;
+}
+
 </style>
 <div class="profile">
-  <div class="photo"><a href="#"><img class="pic" src="https://steamuserimages-a.akamaihd.net/ugc/913541900239404742/048DF566A4F4B51A60C1EB060A2CC6C7FB85CC39/"/></a></div>
+  <div class="photo">
+	<a href="#"><div class="menu"><a href="#"><i class="fa fa-bars menu-ico"></i></a></div></a>
+	
   <div class="box">
 	  <i class="fa fa-codepen"></i>
 	  <i class="fa fa-facebook"></i>
@@ -176,7 +201,7 @@ body {
 <script>
 
 (function () {
-  $('.profile').click(function () {
+  $('.menu').click(function () {
     $(this).toggleClass('active');
     return $('.box').toggleClass('open');
   });
