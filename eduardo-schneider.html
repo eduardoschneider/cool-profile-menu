@@ -8,6 +8,7 @@
 <style>
 
 @import 'https://fonts.googleapis.com/css?family=Raleway';
+
 * {
   outline: none;
   user-select: none;
@@ -44,7 +45,7 @@ body {
   height: 100px;
   border-radius: 100%;
   overflow: hidden;
-  border:5px double black;
+  border:3px double black;
   background-color: #fafafa;
   margin-left: 35px;
   margin-top:-0.1px;
@@ -164,7 +165,6 @@ body {
 	z-index:5;
 	width:30px;
 	height:30px;
-	
 	top:68%;
 	left:51%;
 	background-color:transparent;
@@ -176,8 +176,70 @@ body {
 	margin-top:8px;
 	margin-left:9px;
 	color:black;
-	font-size:19px;
-	font-weight:bold;
+	font-size:22px;
+}
+
+@media (hover:none) {
+	.profile {
+		  left: 40%;
+	}
+
+	.profile .photo {
+		width:200px;
+		height:200px;
+		background-size:250px 200px;
+	}
+	
+	.menu-ico {
+		font-size:40px !important;
+		margin-left:0%;
+	}
+	
+	.profile .box i {
+		height:70px;
+		padding-top:20px;
+		width:90px;
+		font-size:50px;
+		margin-top:50px;
+	}
+	
+	.profile .box {
+		right:85%;
+		top:-20%;
+	}
+	
+	.profile .box.open i:nth-of-type(1) {
+	  transform: rotate(-135deg) translateX(140px) rotate(135deg);
+	  transition-delay: 0.2s;
+	}
+	.profile .box.open i:nth-of-type(2) {
+	  transform: rotate(-90deg) translateX(140px) rotate(90deg);
+	  transition-delay: 0.35s;
+	}
+	.profile .box.open i:nth-of-type(3) {
+	  transform: rotate(-45deg) translateX(140px) rotate(45deg);
+	  transition-delay: 0.50s;
+	}
+	.profile .box.open i:nth-of-type(4) {
+	  transform: rotate(0deg) translateX(140px) rotate(0deg);
+	  transition-delay: 0.65s;
+	}
+	.profile .box.open i:nth-of-type(5) {
+	  transform: rotate(45deg) translateX(140px) rotate(-45deg);
+	  transition-delay: 0.8s;
+	}
+	.profile .box.open i:nth-of-type(6) {
+	  transform: rotate(90deg) translateX(140px) rotate(-90deg);
+	  transition-delay: 0.95s;
+	}
+	.profile .box.open i:nth-of-type(7) {
+	  transform: rotate(135deg) translateX(140px) rotate(-135deg);
+	  transition-delay: 1.10s;
+	}
+	.profile .box.open i:nth-of-type(8) {
+	  transform: rotate(180deg) translateX(140px) rotate(-180deg);
+	  transition-delay: 1.25s;
+	}
 }
 
 </style>
