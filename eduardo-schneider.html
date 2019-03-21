@@ -25,9 +25,9 @@ body {
 }
 
 .profile {
+  margin-top:70px;
+  margin-left:40px;
   position: absolute;
-  top: 40%;
-  left: 45%;
 }
 @keyframes show-profile {
   0% {
@@ -74,7 +74,8 @@ body {
 }
 .profile .box i {
   width: 50px;
-  height: 50px;
+  height: 48px;
+  padding-top:2px;
   border-radius: 50%;
   background-color: #ececec;
   font-size: 25px;
@@ -181,7 +182,9 @@ body {
 
 @media (hover:none) {
 	.profile {
-		  left: 40%;
+		  margin-left:10%;
+		  margin-top:12%;
+		  
 	}
 
 	.profile .photo {
@@ -243,20 +246,22 @@ body {
 }
 
 </style>
+
 <div class="profile">
-  <div class="photo">
-	<a href="#"><div class="menu"><a href="#"><i class="fa fa-bars menu-ico"></i></a></div></a>
-	
-  <div class="box">
-	  <i class="fa fa-codepen"></i>
-	  <i class="fa fa-facebook"></i>
-	  <i class="fa fa-github"></i>
-	  <i class="fa fa-tumblr"></i>
-	  <i class="fa fa-linkedin"></i>
-	  <i class="fa fa-deviantart"></i>
-	  <i class="fa fa-twitter"></i>
-	  <i class="fa fa-instagram"></i>
-  </div>
+	<div class="photo">
+		<a href="#"><div class="menu"><a href="#"><i class="fa fa-bars menu-ico"></i></a></div></a>
+
+		<div class="box">
+			<i class="fa fa-codepen"></i>
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-github"></i>
+			<i class="fa fa-tumblr"></i>
+			<i class="fa fa-linkedin"></i>
+			<i class="fa fa-deviantart"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+		</div>
+	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
